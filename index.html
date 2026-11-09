@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Mano - Servos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Control de Mano 🤚</h1>
+    
+    <!-- Video de la cámara -->
+    <div class="video-wrapper">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Estado de la detección -->
+    <div class="estado">
+      <span id="estado-texto">Esperando mano...</span>
+    </div>
+
+    <!-- Botones de conexión -->
+    <div class="controles">
+      <button id="btn-conectar">Conectar ESP32</button>
+      <button id="btn-desconectar" disabled>Desconectar</button>
+    </div>
+  </div>
+
+  <!-- Cargar MediaPipe Tasks Vision desde CDN -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

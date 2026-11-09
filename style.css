@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #1a1a2e;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contenedor {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+video, canvas {
+  display: block;
+  width: 640px;
+  height: 480px;
+  transform: scaleX(-1); /* Efecto espejo */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.estado {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  padding: 10px;
+  background: #16213e;
+  border-radius: 8px;
+}
+
+#estado-texto {
+  color: #00d9ff;
+}
+
+.controles button {
+  padding: 12px 24px;
+  margin: 0 8px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #0f3460;
+  color: white;
+  transition: background 0.2s;
+}
+
+.controles button:hover:not(:disabled) {
+  background: #e94560;
+}
+
+.controles button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
